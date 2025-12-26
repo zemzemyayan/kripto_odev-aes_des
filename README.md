@@ -1,4 +1,4 @@
-# kripto_odevi - Basit Öğretici Proje
+# kripto_odevi - 
 
 ## Kurulum
 python -m venv venv
