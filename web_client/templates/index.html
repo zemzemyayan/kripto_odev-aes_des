@@ -1,0 +1,35 @@
+<!-- web_client/templates/index.html -->
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Kripto Demo</title></head>
+  <body>
+    <h2>Kripto İstemci (Basit)</h2>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for m in messages %}
+          <li>{{ m }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <form method="post">
+      <label>Algoritma:
+        <select name="alg">
+          <option>AES</option>
+          <option>DES</option>
+          <option>RSA</option>
+        </select>
+      </label><br>
+      <label>Mod:
+        <select name="mode">
+          <option value="lib">lib</option>
+          <option value="manual">manual</option>
+        </select>
+      </label><br>
+      <label>Mesaj: <input name="message" type="text" /></label><br>
+      <button type="submit">Gönder</button>
+    </form>
+  </body>
+</html>
